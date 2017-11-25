@@ -13,7 +13,11 @@ export class AppComponent {
 
   addTodo() {
     if (this.todo) {
-      this.todos.push(this.todo);
+      let newTodo = {
+        text: this.todo,
+        done: false
+      };
+      this.todos.push(newTodo);
       this.todo = '';
     }
   }
