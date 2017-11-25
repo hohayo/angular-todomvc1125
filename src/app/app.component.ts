@@ -10,9 +10,9 @@ export class AppComponent {
   inputHint = 'What needs to be done?';
   todos = [];
 
-  addTodo(target: HTMLInputElement) {
-    // console.log(target.value);
-    this.todos.push(target.value);
+  addTodo(element: HTMLInputElement) {
+    // console.log(element.value);
+    this.todos.push(element.value);
   }
 
 }
