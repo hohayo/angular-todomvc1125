@@ -68,6 +68,10 @@ export class AppComponent implements OnInit {
     this.http.delete(`${this.apiUrl}/${todo.id}`)
       .subscribe(data => {
         this.todos = this.todos.filter(item => item !== todo);
+      }, error => {
+        // error handling
+      }, () => {
+        // completed
       });
   }
 
