@@ -18,4 +18,8 @@ export class AppComponent {
     }
   }
 
+  todoInputChange($event) {
+    this.todo = $event;
+  }
+
 }
