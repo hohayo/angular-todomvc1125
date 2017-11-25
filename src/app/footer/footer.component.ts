@@ -23,6 +23,10 @@ export class FooterComponent implements OnInit {
 
   @Output() clearEvent = new EventEmitter();
 
+  filterType = 'All';
+
+  @Output() filterTypeEvent = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit() {
@@ -30,6 +34,11 @@ export class FooterComponent implements OnInit {
 
   log() {
     console.log('log from footer');
+  }
+
+  changeFilterType(type) {
+    this.filterType = type;
+    this.filterTypeEvent.emit(type);
   }
 
 }
