@@ -45,4 +45,8 @@ export class AppComponent {
     });
   }
 
+  removeTodo(todo) {
+    this.todos = this.todos.filter(item => item !== todo);
+  }
+
 }
