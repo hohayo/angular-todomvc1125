@@ -22,7 +22,7 @@
   </section>
   <!-- This footer should hidden by default and shown when there are todos -->
   <app-footer [data]="todos"
-  (clearEvent)="clearCompleted()"></app-footer>
+  (clearEvent)="clearCompleted()" #footerComponent></app-footer>
 </section>
 <footer class="info">
   <p>Double-click to edit a todo</p>
@@ -32,3 +32,5 @@
   <p>Created by <a href="http://todomvc.com">you</a></p>
   <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
 </footer>
+
+<button (click)="footerComponent.log()">log</button>
