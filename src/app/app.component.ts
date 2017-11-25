@@ -11,6 +11,7 @@ export class AppComponent {
   todos = [];
   todo = '';
   filterType = 'All';
+  isToggleAll = false;
 
   addTodo() {
     if (this.todo) {
@@ -36,6 +37,12 @@ export class AppComponent {
 
   filterTypeChange($event) {
     this.filterType = $event;
+  }
+
+  toggleAllChange() {
+    this.todos.forEach(item => {
+      item.done = this.isToggleAll;
+    });
   }
 
 }
